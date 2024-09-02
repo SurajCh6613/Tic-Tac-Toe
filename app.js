@@ -1,7 +1,7 @@
 let boxes = document.querySelectorAll(".box");
 let resetBtn = document.querySelector(".reset-btn");
 
-let turnX = true; //PlayerX, PlayerO
+let turnO = true; //PlayerX, PlayerO
 
 const winpatterns = [
   [0, 1, 2],
@@ -14,3 +14,37 @@ const winpatterns = [
   [6, 7, 8],
 ];
 
+boxes.forEach((box)=> {
+  box.addEventListener('click', ()=>{
+    // console.log("box clicked");
+    if(turnO){
+      box.innerText = "O";
+      turnO = false;
+    }
+    else{
+      box.innerText = "X";
+      turnO = true;
+    }
+    box.disabled = true;
+
+    checkWinner();
+  })
+})
+
+const checkWinner = ()=> {
+  for(let pattern of winpatterns){
+    
+    // console.log(boxes[pattern[0]],
+    //   boxes[pattern[1]],
+    //   boxes[pattern[2]]
+    // )
+    // console.log(boxes[pattern[0]].innerText,
+    //   boxes[pattern[1]].innerText,
+    //   boxes[pattern[2]].innerText
+    // )
+
+    let pos1 = boxes[pattern[0]].innerText
+    let pos2 = boxes[pattern[1]].innerText
+    let pos3 = boxes[pattern[2]].innerText
+  }
+}
