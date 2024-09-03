@@ -4,7 +4,7 @@
 }
 
 body{
-    background-color: #315758;
+    background-color: #7F7E90;
     text-align: center;
 }
 
@@ -44,4 +44,16 @@ body{
     color: #fff;
     border-radius: 1rem;
     border: none;
+}
+
+#msg{
+    color: #ffffc7;
+    font-size: 8vmin;
+}
+.msg-container{
+    height: 20vmin;
+}
+
+.hide{
+    display: none;
 }
